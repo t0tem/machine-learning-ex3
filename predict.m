@@ -25,8 +25,8 @@ a1 = [ones(m, 1) X]; %adding bias unit to input layer
 a2 = sigmoid(a1*Theta1'); % activating 2nd (hidden) layer
 a2 = [ones(size(a2, 1), 1) a2]; %adding bias unit to hidden layer
 
-all_p = sigmoid(a2*Theta2'); % activating output layer
-[p_value p] = max(all_p, [], 2); % prediction
+a3 = sigmoid(a2*Theta2'); % activating output layer
+[p_value p] = max(a3, [], 2); % prediction
 
 % =========================================================================
 
